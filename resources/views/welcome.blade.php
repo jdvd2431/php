@@ -48,6 +48,7 @@
 <a class="nav-item nav-link active" href="{{route('product.hi')}}"> <span class="sr-only">Productos</span></a>
 <a class="nav-item nav-link active" href="{{route('brand.hi')}}">Marcas</a>
 <a class="nav-item nav-link active" href="{{route('category.hi')}}">Categories</a>
+<a class="nav-item nav-link active" href="{{route('invoices.hi')}}">Facturas</a>
     </body>
 </html>
 

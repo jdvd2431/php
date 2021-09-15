@@ -69,6 +69,8 @@ Route::get('/brand/form/{id?}',[BrandController::class, 'form'])->name('brand.fo
 Route::post('/brand/save',[BrandController::class, 'save'])->name('brand.save');
 
 use App\Http\Controllers\CategoryController;
+use App\Models\Invoice;
+
 Route::get('/category', [CategoryController::class, "show"])->name('category.hi');
 
 Auth::routes();
@@ -78,3 +80,11 @@ Route::get('/category/delete/{id}',[CategoryController::class, 'delete'])->name(
 Route::get('/category/form/{id?}',[CategoryController::class, 'form'])->name('category.form');
 
 Route::post('/category/save',[CategoryController::class, 'save'])->name('category.save');
+//Route::get('/invoice/{id}', function ($id) {
+  //  $invoice = App\Models\Invoice::findOrFail($id);
+    //return dd($invoice->products);
+//});
+use App\Http\Controllers\InvoiceController;
+Route::get('/invoices',[InvoiceController::class, 'show'])->name('invoices.hi');
+Route::get('/invoices/form',[InvoiceController::class, 'form'])->name('invoices.form');
+Auth::routes();
